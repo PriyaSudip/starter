@@ -2,8 +2,9 @@
 steps:
 
 - label: step1
-  command: echo "hello"
+  command: echo "hello $BUILDKITE_BUILD_AUTHOR_EMAIL"
 
 notify:
 - if: build.branch != "main"
-  email: priya@buildkite.com
+
+  email: $BUILDKITE_BUILD_AUTHOR_EMAIL
