@@ -1,3 +1,4 @@
 steps:
 - label: ":test multi line:"
-  command: echo  "$test added ci xxx fesdfddfdsf"
+  command: echo  "[ci-skip]"
+
