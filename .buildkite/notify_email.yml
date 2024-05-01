@@ -1,7 +1,8 @@
 ---
 steps:
-- if: build.branch != "main"
-  label: DBT_BUILD_INTEGRATION
+
+- label: step1
+  command: echo "hello"
 
 notify:
 - if: build.branch != "main"
