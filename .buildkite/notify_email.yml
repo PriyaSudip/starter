@@ -1,0 +1,8 @@
+---
+steps:
+- if: build.branch != "main"
+  label: DBT_BUILD_INTEGRATION
+
+notify:
+- if: build.branch != "main"
+  email: priya@buildkite.com
