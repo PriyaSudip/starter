@@ -5,7 +5,5 @@ steps:
   command: echo "hello $BUILDKITE_BUILD_AUTHOR_EMAIL"
 
 notify:
-- if: build.branch != "main" && build.source == "schedule"
-  email: priya@buildkite.com
-- if: build.branch != "main" && build.source != "schedule"
+- if: build.branch != "main" 
   email: $BUILDKITE_BUILD_AUTHOR_EMAIL
