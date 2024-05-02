@@ -2,7 +2,7 @@
 steps:
 
 - label: step1
-  command: echo "hello $BUILDKITE_BUILD_AUTHOR_EMAIL"
+  command: echo "hello 1 $BUILDKITE_BUILD_AUTHOR_EMAIL"
 
 notify:
 - if: build.branch != "main" 
