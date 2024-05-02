@@ -1,4 +1,4 @@
 steps:
 - label: ":test multi line:"
-  command: echo  "[ci-skip]"
+  command: echo  "[ci-skip] fvfadd fvdfv adding ci-skip [ci-skip]"
 
