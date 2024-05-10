@@ -17,14 +17,6 @@ steps:
       <<: *plugins
 
   
-  - block: "Release"
-    key: 3
-    depends_on: 2
-    prompt: "check dependencys"
-    blocked_state: failed
-    plugins:
-      <<: *plugins
-
   
   - label: 3rd step
     depends_on:
