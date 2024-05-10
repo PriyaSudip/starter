@@ -10,7 +10,7 @@ steps:
   - block: "Release"
     key: 3
     depends_on: 2
-    prompt: "check dependency"
+    prompt: "check dependencys"
     blocked_state: failed
   
   - label: 3rd step
