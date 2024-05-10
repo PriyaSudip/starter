@@ -11,17 +11,8 @@ steps:
 
 
   - label: 2st step
-    key: 2
     command: echo "test"
     plugins:
       <<: *plugins
 
-  
-  
-  - label: 3rd step
-    depends_on:
-    - 3
-    command: echo "hi"
-    plugins:
-      <<: *plugins
 
