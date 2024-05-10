@@ -5,7 +5,7 @@ plugins: &plugins
 steps:
 
   - label: 1st step
-    command: echo "hello"
+    command: echo "hellos"
     plugins:
       <<: *plugins
 
