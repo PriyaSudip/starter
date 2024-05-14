@@ -1,0 +1,5 @@
+steps:
+- label: Deploy to testing
+  command: echo "hello"
+  key: step1
+  queue: hosted-agent
