@@ -2,4 +2,5 @@ steps:
 - label: testing hosted agent
   command: echo "hello"
   key: step1
-  queue: hosted-agent
+  agents:
+    queue: hosted-agent
