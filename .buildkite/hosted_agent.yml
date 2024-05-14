@@ -3,4 +3,4 @@ steps:
   command: echo "hello"
   key: step1
   agents:
-    queue: hosted-agent
+    queue: hosted_agent
