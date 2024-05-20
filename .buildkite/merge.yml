@@ -1,4 +1,3 @@
 steps:
 - label: Verify if freezed
   command: echo "testing merging PR only"
-  if: build.message == /merge pull request/
