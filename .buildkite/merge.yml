@@ -1,0 +1,3 @@
+steps:
+- label: Verify if freezed
+  command: echo "testing merging PR only"
