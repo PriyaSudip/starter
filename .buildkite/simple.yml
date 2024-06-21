@@ -1,3 +1,3 @@
 steps:
   - label: "test"
-    command: echo "3e"
+    command: echo "3e3"
