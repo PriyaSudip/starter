@@ -5,7 +5,7 @@ steps:
     env:
       SERVER: ""
     soft_fail:
-      - exit_status: -1
+      - exit_status: 255
   
   - label: "build"
     branches: test
