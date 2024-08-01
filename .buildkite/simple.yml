@@ -4,6 +4,8 @@ steps:
     command: exit -1
     env:
       SERVER: ""
+    soft_fail:
+      - exit_status: -1
   
   - label: "build"
     branches: test
