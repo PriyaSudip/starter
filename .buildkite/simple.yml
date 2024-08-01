@@ -1,13 +1,13 @@
 steps:
   - label: "test"
     skip: false
-    command: echo "test"
+    command: exit -1
     env:
       SERVER: ""
   
   - label: "build"
     branches: test
-    command: echo "buildcc"
+    command: echo "buildcc gh"
   
   - label: "deploy"
     command: echo "decploy"
