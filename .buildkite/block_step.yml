@@ -1,4 +1,7 @@
 steps: 
+  - command: echo "Hello, World!"
+    label: ":rocket:"
+    key: "hello-world"
    - block: "Release"
      prompt: "Fill out the details for release"
      fields: 
