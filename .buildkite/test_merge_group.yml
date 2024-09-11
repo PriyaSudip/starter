@@ -1,0 +1,4 @@
+
+steps:
+  - label: "Merge group"
+    command: echo "3"
