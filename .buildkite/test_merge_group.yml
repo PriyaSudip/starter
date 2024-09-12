@@ -1,6 +1,6 @@
 
 steps:
   - label: "Merge group"
-    command: echo "35"
+    command: echo "$(git show HEAD -s --format=fuller --no-color)"
     plugins:
       - github.com/thedyrt/skip-checkout-buildkite-plugin#v0.1.1:
