@@ -2,3 +2,5 @@
 steps:
   - label: "Merge group"
     command: echo "3"
+    plugins:
+      - github.com/thedyrt/skip-checkout-buildkite-plugin#v0.1.1:
