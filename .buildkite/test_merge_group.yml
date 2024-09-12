@@ -1,6 +1,6 @@
 
 steps:
   - label: "Merge group"
-    command: echo "1 $(git show HEAD -s --format=fuller --no-color)"
+    command: echo "1 $$BUILDKITE_COMMIT"
     plugins:
       - github.com/thedyrt/skip-checkout-buildkite-plugin#v0.1.1:
