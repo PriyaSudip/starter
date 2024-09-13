@@ -1,7 +1,7 @@
 steps: 
 
   - command: exit 1
-  - command: sleep 600
+  - command: sleep 6
   - label: Upload
     key: step1
     command: buildkite-agent artifact upload "./upload.txt"
