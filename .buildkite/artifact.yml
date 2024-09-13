@@ -3,7 +3,6 @@ steps:
   
   - command: sleep 600
   - trigger: trigger
-    async: true
     label: "Triggering pipelines"
   - label: Upload
     key: step1
