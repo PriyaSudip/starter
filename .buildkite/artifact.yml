@@ -1,7 +1,7 @@
 steps: 
 
   
-  - command: sleep 6
+  - command: sleep 600
   - trigger: trigger
     async: true
     label: "Triggering pipelines"
