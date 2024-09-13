@@ -1,7 +1,9 @@
 steps: 
 
-  - command: exit 1
+  
   - command: sleep 6
+  - trigger: trigger
+    label: "Triggering pipelines"
   - label: Upload
     key: step1
     command: buildkite-agent artifact upload "./upload.txt"
@@ -9,3 +11,4 @@ steps:
   - label: Download
     depends_on: step1
     command: buildkite-agent artifact download "*upload.txt" .
+

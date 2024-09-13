@@ -1,5 +1,5 @@
 - label: Testing triggers
-  command: echo "hello"
+  command: exit 1
 
 - trigger: "step-notification"
   label: ":rocket: Deploy event trigger"
