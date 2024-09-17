@@ -8,7 +8,7 @@ steps:
     key: trigger
     label: "Triggering pipelines"
 
-  wait: ~
+  - wait: ~
   
   - label: "Run only if above pass"
     command: |
