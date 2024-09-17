@@ -1,0 +1,9 @@
+steps:
+  - label: "one"
+    command: ./src/upload.sh
+    key: "one"
+
+  - label: "three"
+    command: echo "2"
+    key: "three"
+  

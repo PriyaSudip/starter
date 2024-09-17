@@ -1,9 +1,11 @@
 steps: 
 
   
-  - command: sleep 600
+  - command: sleep 200
+
   - trigger: trigger
     label: "Triggering pipelines"
+    
   - label: Upload
     key: step1
     command: buildkite-agent artifact upload "./upload.txt"
