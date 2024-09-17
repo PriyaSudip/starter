@@ -1,10 +1,23 @@
+
 steps: 
 
   
   - command: sleep 200
 
   - trigger: trigger
+    key: trigger
     label: "Triggering pipelines"
+  
+  - label: "Run only if above pass"
+    command: |
+      if [ $$(buildkite-agent step get "outcome" --step "trigger") == "failed" ]; then
+         cat <<- YAML | buildkite-agent pipeline upload 
+         steps:
+            - label: "Cancelling the build"
+              cancel_on_build_failure: true
+      YAML
+      fi
+  
     
   - label: Upload
     key: step1
