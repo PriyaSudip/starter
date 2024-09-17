@@ -7,9 +7,10 @@ steps:
   - trigger: trigger
     key: trigger
     label: "Triggering pipelines"
+
+  wait: ~
   
   - label: "Run only if above pass"
-    depends_on: trigger
     command: |
       if [ $$(buildkite-agent step get "outcome" --step "trigger") != "passed" ]; then
          cat <<- YAML | buildkite-agent pipeline upload 
