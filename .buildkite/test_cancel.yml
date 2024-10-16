@@ -1,0 +1,17 @@
+steps:
+
+- key: one
+  label: one 
+  command: buildkite-agent meta-data set "job_to_cancel" $BUILDKITE_JOB_ID | sleep 100
+
+- key: two
+  label: two
+  command: echo 2
+
+- key: three
+  label: three
+  command: echo 3
+
+-  key: four
+   depends_on: two, three
+   command:  .src/cancel.sh
