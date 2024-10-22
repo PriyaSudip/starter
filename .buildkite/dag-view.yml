@@ -1,0 +1,13 @@
+steps:
+  - key: shell-check
+    label: ':pipeline shell:'
+    command: echo "shell check"
+  - key: lock-check
+    label: ':pipeline lock:'
+    command: echo "lock check"
+  - key: both-check
+    label: pipeline both
+    command: echo "hello"
+    depends_on:
+      - shell-check
+      - lock-check

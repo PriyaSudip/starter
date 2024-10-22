@@ -1,4 +1,4 @@
 
 steps:
   - label: ":rocket:"
-    command: echo "hi"
+    command: echo "hi 1"
