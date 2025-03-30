@@ -1,8 +1,10 @@
 ---
 steps:
-- label: Testing triggers
-  key: trigger
-  command: echo "Testing triggers"
-- label: ":rocket: Deploy evdent trfigcger"
-  trigger: blocked-pipeline
-  depends_on: trigger
+  - command: echo "Running ci "
+    key: ci
+    command: sleep 1
+
+  - label: ":rocket: trigger  cd"
+    trigger: child-pipeline
+    key: cd-trigger
+    depends_on: "ci"

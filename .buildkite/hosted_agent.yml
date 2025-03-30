@@ -1,6 +1,4 @@
 steps:
 - label: testing hosted agent
-  command: echo $(buildkite-agent secret get 'test')
+  command: ./src/hosted_secret.sh
   key: step1
-  agents:
-    queue: hosted_agent
