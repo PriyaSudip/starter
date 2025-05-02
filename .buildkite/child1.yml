@@ -2,4 +2,4 @@ steps:
 - label: "child step 1"
   key: step1
   command: exit 1
-  soft_fail: true
+  soft_fail: false
