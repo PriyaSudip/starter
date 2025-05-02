@@ -11,7 +11,6 @@ steps:
   key: step3
   trigger: child1
 
-
 - label: dependent
   depends_on: 
     - step1
