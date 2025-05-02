@@ -3,7 +3,7 @@ steps:
   key: step11
   parallelism: 6
   command: exit 1 && sleep 10
-  soft_fail: true
+
 
 
 - label: "child step 12"
