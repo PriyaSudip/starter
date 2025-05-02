@@ -9,6 +9,7 @@ steps:
 
 - label: "step 3"
   key: step3
+  async: false
   trigger: child1
 
 - label: dependent
