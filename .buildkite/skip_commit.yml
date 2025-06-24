@@ -1,0 +1,9 @@
+steps:
+
+  - label: check if commit should be skipped
+    key: skip-commit
+    command: echo "Checking if commit should be skipped! " 
+    plugins:
+      - skip-build-for-commit#SUP-3711/add-plugin:
+          build_token_env: "SKIP_BUILD_API_TOKEN"
+
