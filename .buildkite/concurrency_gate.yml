@@ -17,7 +17,8 @@ steps:
     depends_on: start-gate
     agents:
       queue: default
-  - command: echo "Running e2e tests after the deployment"
+  - command: echo "Running e2e tests after the deployment" | sleep 80
+    concurrency_group: gate 
     parallelism: 3
     depends_on:
       - stage-deploy
