@@ -15,7 +15,7 @@ docker login --username AWS --password-stdin 097340723131.dkr.ecr.us-east-1.amaz
 
 docker push 097340723131.dkr.ecr.us-east-1.amazonaws.com/my-app:latest
 
-export AWS_DEFAULT_REGION= ${APP_ACCOUNT_REGION:-"ap-southeast-2"}
+export AWS_DEFAULT_REGION=${APP_ACCOUNT_REGION:-"ap-southeast-2"}
 echo "--- Tagging and pushing to Account app account $AWS_DEFAULT_REGION"
 
 
