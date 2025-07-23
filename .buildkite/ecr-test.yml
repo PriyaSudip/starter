@@ -11,5 +11,12 @@ steps:
           extra_build_args:
             - "--pull"
           skip_push: true 
-    commands: echo "--- Tagging and pushing to main Account $$AWS_WEB_IDENTITY_TOKEN_FILE"
+    commands: |
+      - echo "--- Tagging and pushing to main Account"
+      - docker tag my-app:latest 097340723131.dkr.ecr.us-east-1.amazonaws.com/my-app:latest
+
+      - aws ecr get-login-password --region us-east-1 \
+          | docker login --username AWS --password-stdin 097340723131.dkr.ecr.us-east-1.amazonaws.com
+
+      - docker push 097340723131.dkr.ecr.us-east-1.amazonaws.com/my-app:latest
 
