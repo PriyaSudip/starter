@@ -10,7 +10,7 @@ steps:
           extra_build_args:
             - "--pull"
           skip_push: true  
-    commands:
+    commands:|
       - echo "--- Tagging and pushing to main Account"
       - docker tag my-app:latest 097340723131.dkr.ecr.us-east-1.amazonaws.com/my-app:latest
 
