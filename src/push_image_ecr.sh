@@ -6,7 +6,7 @@ echo "--- Tagging and pushing to main Account $AWS_DEFAULT_REGION"
 
 
 
-docker build -t my-app:latest .
+docker build -t my-app:$BUILDKITE_BUILD_NUMBER .
 
 docker tag my-app:$BUILDKITE_BUILD_NUMBER 097340723131.dkr.ecr.us-east-1.amazonaws.com/my-app:latest
 
