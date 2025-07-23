@@ -1,0 +1,8 @@
+steps:
+  - command: test.sh
+    plugins:
+      - docker-compose#v5.9.0:
+          run: app
+          config: docker-compose.tests.yml
+          env:
+            - BUILDKITE_BUILD_NUMBER

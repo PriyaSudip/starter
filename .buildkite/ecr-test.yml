@@ -1,0 +1,29 @@
+steps:
+  - label: ":docker: Build once, push to multiple ECRs"
+    plugins:
+      - ecr#v2.3.0:
+          login: true
+          account_ids: "097340723131"
+          region: "us-east-1"
+          repository: "my-app"
+          tag: "latest"
+          extra_build_args:
+            - "--pull"
+          skip_push: true  
+    commands:
+      - echo "--- Tagging and pushing to main Account"
+      - docker tag my-app:latest 097340723131.dkr.ecr.us-east-1.amazonaws.com/my-app:latest
+
+      - aws ecr get-login-password --region us-east-1 \
+          | docker login --username AWS --password-stdin 097340723131.dkr.ecr.us-east-1.amazonaws.com
+
+      - docker push 097340723131.dkr.ecr.us-east-1.amazonaws.com/my-app:latest
+
+      - echo "--- Tagging and pushing to Account app account"
+    - export AWS_DEFAULT_REGION=APP_ACCOUNT_REGION
+
+      - aws ecr get-login-password --region ap-southeast-2 \
+          | docker login --username AWS --password-stdin 097340723131.dkr.ecr.ap-southeast-2.amazonaws.com
+
+      - docker tag my-app:latest 097340723131.dkr.ecr.ap-southeast-2.amazonaws.com/my-app:latest
+      - docker push 097340723131.dkr.ecr.ap-southeast-2.amazonaws.com/my-app:latest
