@@ -6,8 +6,6 @@ steps:
           login: true
           account_ids: "097340723131"
           region: "us-east-1"
-          repository: "my-app"
-          tag: "latest"
           extra_build_args:
             - "--pull"
           skip_push: true 
