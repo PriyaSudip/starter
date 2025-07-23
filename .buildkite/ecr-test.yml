@@ -11,5 +11,5 @@ steps:
           extra_build_args:
             - "--pull"
           skip_push: true 
-    commands: ./scripts/push_image_ecr.sh
+    commands: ./src/push_image_ecr.sh
      
