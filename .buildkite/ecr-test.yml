@@ -1,3 +1,4 @@
+
 steps:
   - label: ":docker: Build once, push to multiple ECRs"
     plugins:
@@ -9,5 +10,7 @@ steps:
           tag: "latest"
           extra_build_args:
             - "--pull"
-          skip_push: true  
+          skip_push: true 
+    commands: |
+      - echo "--- Tagging and pushing to main Account"
 
