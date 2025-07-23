@@ -9,5 +9,6 @@ steps:
           extra_build_args:
             - "--pull"
           skip_push: true 
+      - aws-assume-role-with-web-identity#v1.4.0:
+          role-arn: arn:aws:iam::767828730660:role/priya-cross-account-role
     commands: ./src/push_image_ecr.sh
-     
