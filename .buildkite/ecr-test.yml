@@ -11,6 +11,5 @@ steps:
           extra_build_args:
             - "--pull"
           skip_push: true 
-    commands: |
-      - echo "--- Tagging and pushing to main Account $AWS_WEB_IDENTITY_TOKEN_FILE"
+    commands: echo "--- Tagging and pushing to main Account $$AWS_WEB_IDENTITY_TOKEN_FILE"
 
