@@ -3,6 +3,9 @@
 set -e
 
 echo "--- Tagging and pushing to main Account"
+
+docker build -t my-app:latest .
+
 docker tag my-app:latest 097340723131.dkr.ecr.us-east-1.amazonaws.com/my-app:latest
 
 aws ecr get-login-password --region us-east-1 \
