@@ -7,7 +7,7 @@ steps:
   command: echo "hello 1"
 
 - block: "Block on condition"
-  blocked_state: "failed"
+  blocked_state: "pending"
 
 - label: Deploy to testing with block
   command: echo "hello 2"
