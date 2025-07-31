@@ -1,3 +1,3 @@
 steps:
-- label: Deploy to testing
+- label: Deploy to testing with block
   command: echo "hello 1"
