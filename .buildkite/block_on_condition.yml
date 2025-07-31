@@ -3,6 +3,12 @@ steps:
   command: echo "hello 1"
 
 - block: "Block on condition"
+  blocked_state: "running"
 
 - label: Deploy to testing with block
   command: echo "hello 2"
+
+notify:
+
+  - github_commit_status:
+    context: "priya-custom-${BUILDKITE_BRANCH}-${BUILDKITE_BUILD_NUMBER}-${BUILDKITE_COMMIT}"
