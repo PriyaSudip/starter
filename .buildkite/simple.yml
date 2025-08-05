@@ -3,6 +3,9 @@ steps:
 
 - key: dd_key_test_one
   label: step_1
+  retry:
+    automatic:
+      limit: 1
   command: echo "hi from webhook"
   key: one
   env:
