@@ -6,7 +6,7 @@ steps:
   retry:
     automatic:
       limit: 1
-  command: echo "hi from webhook"
+  command: echo "hi from webhook"| exit 1
   key: one
   env:
     $TEST_ENV_CMD: "True"
