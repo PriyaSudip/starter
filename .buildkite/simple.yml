@@ -16,7 +16,7 @@ steps:
 - key: dd_key_test_two
   depends_on: 
   label: step_2
-  command: buildkite-agent meta-data set "dd_tags.key" dd_key_test_two
+  command: buildkite-agent meta-data set "dd_tags.key" dd_key_test_two | buildkite-agent meta-data set "dd_tags.retry" ${BUILDKITE_RETRY_COUNT}
 - key: dd_key_test_three
   label: step_3
   command: buildkite-agent meta-data set "dd_tags.key" dd_key_test_three
