@@ -34,4 +34,3 @@ steps:
     command: sleep 20
     parallelism: 25
     timeout_in_minutes: 15
-    cancel_on_build_failing: true
