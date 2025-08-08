@@ -13,6 +13,8 @@ steps:
       automatic:
       - limit: 2
         exit_status: 255
+      - limit: 2
+        exit_status: -1
       - limit: 1
         signal_reason: cancel
       - limit: 4
@@ -31,7 +33,7 @@ steps:
         exit_status: 137
       - limit: 2
         exit_status: 129
-    command: sleep 10
-    parallelism: 120
+    command: sleep 20
+    parallelism: 25
     timeout_in_minutes: 15
     cancel_on_build_failing: true
