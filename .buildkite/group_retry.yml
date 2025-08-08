@@ -2,7 +2,7 @@ steps:
 - group:
   label: ":jest: Jest"
   steps:
-  - label: ":toolbox:"
+  - label: ":toolbox: yes"
     parallelism: 10
     retry:
       manual:
