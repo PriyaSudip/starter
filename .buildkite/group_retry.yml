@@ -1,0 +1,31 @@
+steps:
+- group:
+  label: ":jest: Jest"
+  steps:
+  - label: ":toolbox:"
+    parallelism: 10
+    retry:
+      manual:
+        reason: Retries are disabled in the merge queue
+        allowed: false
+      automatic:
+      - limit: 2
+        exit_status: 255
+      - limit: 1
+        signal_reason: cancel
+      - limit: 4
+        exit_status: 143
+      - limit: 2
+        exit_status: -1
+      - limit: 2
+        exit_status: 124
+      - limit: 2
+        exit_status: 128
+      - limit: 2
+        exit_status: 134
+      - limit: 2
+        exit_status: 139
+      - limit: 2
+        exit_status: 137
+      - limit: 2
+        exit_status: 129
