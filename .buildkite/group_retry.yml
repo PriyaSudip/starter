@@ -5,7 +5,7 @@ steps:
   label: ":jest: Jest"
   steps:
   - key: jest
-    label: ":jest: Jest "
+    label: ":jest: Jest"
     retry:
       manual:
         reason: Retries are disabled in the merge queue
