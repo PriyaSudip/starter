@@ -31,7 +31,7 @@ steps:
         exit_status: 137
       - limit: 2
         exit_status: 129
-    command: echo "hi"
+    command: sleep 10
     parallelism: 120
     timeout_in_minutes: 15
     cancel_on_build_failing: true
