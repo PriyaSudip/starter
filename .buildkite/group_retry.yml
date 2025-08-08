@@ -1,9 +1,11 @@
+
+---
 steps:
 - group:
   label: ":jest: Jest"
   steps:
-  - label: ":toolbox: "
-    parallelism: 10
+  - key: jest
+    label: ":jest: Jest"
     retry:
       manual:
         reason: Retries are disabled in the merge queue
@@ -29,3 +31,7 @@ steps:
         exit_status: 137
       - limit: 2
         exit_status: 129
+    command: echo "hi"
+    parallelism: 120
+    timeout_in_minutes: 15
+    cancel_on_build_failing: true
