@@ -13,8 +13,6 @@ steps:
       automatic:
       - limit: 2
         exit_status: 255
-      - limit: 2
-        exit_status: -1
       - limit: 1
         signal_reason: cancel
       - limit: 4
