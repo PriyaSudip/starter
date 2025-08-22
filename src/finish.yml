@@ -1,0 +1,6 @@
+steps:
+
+- label: "finish"
+  key: finish
+  depends_on: sinatra
+  command: echo "finsih"

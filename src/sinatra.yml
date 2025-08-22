@@ -1,0 +1,5 @@
+steps:
+
+- label: "sinatra"
+  key: sinatra
+  command: echo "sinatra"

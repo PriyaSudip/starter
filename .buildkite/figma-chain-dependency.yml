@@ -1,0 +1,5 @@
+---
+steps:
+- label: "setup"
+  key: setup
+  command: ./src/setup.sh
