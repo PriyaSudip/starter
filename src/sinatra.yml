@@ -2,4 +2,5 @@ steps:
 
 - label: "sinatra"
   key: sinatra
+  depends_on: []
   command: echo "sinatra"
