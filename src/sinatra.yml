@@ -2,5 +2,5 @@ steps:
 
 - label: "sinatra"
   key: sinatra
-  depends_on: finish
+  depends_on: setup
   command: echo "sinatra"
