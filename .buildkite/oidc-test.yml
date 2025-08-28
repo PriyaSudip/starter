@@ -2,3 +2,7 @@ steps:
 - label: Verify oidc token
   command: echo $(buildkite-agent oidc request-token --audience sts.amazonaws.com)
   key: "step1"
+
+- label: Verify oidc token
+  command: ./src/verify-oidc.sh
+  key: "step1"
