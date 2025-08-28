@@ -5,4 +5,4 @@ steps:
 
 - label: Verify oidc token
   command: ./src/verify-oidc.sh
-  key: "step1"
+  key: "step2:"
