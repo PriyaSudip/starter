@@ -9,3 +9,4 @@ steps:
   key: step12
   command: sleep 18 | exit 1
   soft_fail: true
+  async: true
