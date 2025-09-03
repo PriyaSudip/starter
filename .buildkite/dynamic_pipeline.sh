@@ -1,17 +1,19 @@
 #!/bin/bash
+set -euo pipefail
 
-set -eu
+cat <<YAML
+steps:
+  - label: "trigger"
+    id: trigger
+    command:
+      - |
+        cat <<EOF | buildkite-agent pipeline upload
+        steps:
+          - label: "blah"
+            command: echo hello
+        EOF
 
-echo "steps:"
 
-
-# A deploy step only if it's the master branch
-
-if [[ "$BUILDKITE_BRANCH" == "main" ]]; then
-  echo "  - wait"
-  echo "  - command: \"echo Deploy!\""  
-  echo "    label: \":rocket:\""
-  echo "  - command: \"echo test!\""  
-  echo "    label: \":test:\""
-
-fi
+  - label: "finisher"
+    command: echo "i am done"
+YAML
