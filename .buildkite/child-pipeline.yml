@@ -2,7 +2,7 @@
 steps:
 - label: "TARGET_CLUSTER: ${TARGET_CLUSTER} and buildkite-agent meta-data get selected_cluster"
   key: cd
-  command: echo "cd"
+  command: echo "cds"
 
 - command: echo "-> Start of concurrency gate"
   concurrency_group: gate
