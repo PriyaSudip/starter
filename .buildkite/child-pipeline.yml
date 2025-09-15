@@ -5,10 +5,10 @@ steps:
   command: echo "cds"
 
 - command: echo "contains a label"
-  if: ${BUILDKITE_PULL_REQUEST_LABELS} == "invalid"
+  if: build.pull_request.labels =~ /(^|,)invalid(,|$)/
 
 - command: echo "no label"
-  if: ${BUILDKITE_PULL_REQUEST_LABELS} != "invalid"
+  if: build.pull_request.labels !~ /(^|,)invalid(,|$)/
 
 - command: echo "-> Start of concurrency gate"
   concurrency_group: gate
