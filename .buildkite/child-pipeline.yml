@@ -4,6 +4,12 @@ steps:
   key: cd
   command: echo "cds"
 
+- command: echo "contains a label"
+  if: build.pull_request.labels includes "invalid"
+
+- command: echo "no label"
+  if: ! build.pull_request.labels includes "invalid"
+
 - command: echo "-> Start of concurrency gate"
   concurrency_group: gate
   concurrency: 1
