@@ -10,7 +10,7 @@ steps:
 
 - label: ":label: no invalid"
   command: echo "no label"
-  if: ! "build.pull_request.labels =~ \"invalid\""
+  if:  "build.pull_request.labels !~ \"invalid\""
 
 - command: echo "-> Start of concurrency gate"
   concurrency_group: gate
