@@ -2,4 +2,4 @@
 steps:
 - label: "triggered by parent"
   key: cd
-  command: buildkite-agent artifact download "artifact.txt" . --step ci
+  command: buildkite-agent artifact download "artifact.txt" . --step ci --build ${BUILDKITE_TRIGGERED_FROM_BUILD_ID}
