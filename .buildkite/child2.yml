@@ -1,0 +1,5 @@
+---
+steps:
+- label: "triggered by parent"
+  key: cd
+  command: buildkite-agent artifact download "artifact.txt" . --step ci
