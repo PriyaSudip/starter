@@ -2,7 +2,7 @@
 steps:
   - command: echo "Upload artifact"
     key: ci
-    command: buildkite-agent artifact upload "artifact.txt
+    command: buildkite-agent artifact upload "artifact.txt"
 
   - label: ":rocket: trigger  cd"
     trigger: child1
