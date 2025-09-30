@@ -1,6 +1,6 @@
 ---
 env: 
-  MYVAR: "SomeValuetest30thSep1"
+  MYVAR: "SomeValuetest30thSep1 c"
 steps:
 
 - key: dd_key_test_one
