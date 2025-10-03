@@ -2,16 +2,12 @@
 
 set -eu
 
-echo "steps:"
-
-
-# A deploy step only if it's the master branch
-
+# Set pipeline-wide priority based on branch
 if [[ "$BUILDKITE_BRANCH" == "main" ]]; then
-  echo "  - wait"
-  echo "  - command: \"echo Deploy!\""  
-  echo "    label: \":rocket:\""
-  echo "  - command: \"echo test!\""  
-  echo "    label: \":test:\""
-
+  export PIPELINE_PRIORITY=100
+else
+  export PIPELINE_PRIORITY=200
 fi
+
+echo "steps:"
+echo "  - command: \"echo Running with PIPELINE_PRIORITY=\$PIPELINE_PRIORITY\""
