@@ -1,6 +1,6 @@
 
 steps:
-  - label: ":docker: Build once, push to multiple ECRs"
+  - label: ":docker: Build once, push to multiple ECR"
     plugins:
       - ecr#v2.3.0:
           credential-helper: true
