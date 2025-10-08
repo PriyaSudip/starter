@@ -2,7 +2,7 @@
 steps:
   - label: ":docker: Build once, push to multiple ECR"
     plugins:
-      - ecr#v2.3.0:
+      - ecr#v2.10.0:
           credential-helper: false
           account-ids:
             - "097340723131"
