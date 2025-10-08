@@ -3,7 +3,7 @@ steps:
   - label: ":docker: Build once, push to multiple ECR"
     plugins:
       - ecr#v2.3.0:
-          credential-helper: true
+          credential-helper: false
           account-ids:
             - "097340723131"
             - "public.ecr.aws"
