@@ -1,9 +1,9 @@
 steps:
   - label: "Triggering pipelines"
     plugins:
-      - monorepo-diff#v1.5.0:
+      - monorepo-diff#v1.5.1:
           diff: "git diff --name-only HEAD~1"
           watch:
             - path: src/
               config:
-                trigger: "block"
+                trigger: "pipeline-slug"
