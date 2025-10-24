@@ -6,4 +6,4 @@ steps:
           watch:
             - path: src/
               config:
-                trigger: "artifact-s3"
+                trigger: "block"
