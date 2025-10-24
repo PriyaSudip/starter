@@ -6,4 +6,4 @@ steps:
           watch:
             - path: src/
               config:
-                trigger: "block"
+                command: "src/generate.sh | buildkite-agent pipeline upload"
