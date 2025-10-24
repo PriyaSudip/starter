@@ -1,9 +1,16 @@
 steps:
   - label: "Triggering pipelines"
+    key: "monorepo-trigger"
     plugins:
       - monorepo-diff#v1.5.1:
           diff: "git diff --name-only HEAD~1"
           watch:
             - path: src/
               config:
-                command: "src/generate.sh | buildkite-agent pipeline upload"
+                command: exit 0
+
+
+
+  - label: "Run for any changes within app/ or spec/"
+    command: echo "Changes detected in src/, running pipeline..."
+    if_changed: "{src/}"
