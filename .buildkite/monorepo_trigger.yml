@@ -6,4 +6,4 @@ steps:
           watch:
             - path: src/
               config:
-                trigger: "pipeline-slug"
+                trigger: "block"
