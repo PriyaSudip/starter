@@ -11,6 +11,6 @@ steps:
 
 
 
-  - label: "Run for any changes within app/ or spec/"
+  - label: "Run for any changes within src/"
     command: echo "Changes detected in src/, running pipeline..."
-    if_changed: "{src/}"
+    if_changed: src/**
