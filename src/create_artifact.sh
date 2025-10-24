@@ -13,4 +13,3 @@ pwd
 touch foo.txt
 
 ls
-echo "Created foo.txt in revisions1"

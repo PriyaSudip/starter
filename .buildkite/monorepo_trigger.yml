@@ -4,6 +4,6 @@ steps:
       - monorepo-diff#v1.5.0:
           diff: "git diff --name-only HEAD~1"
           watch:
-            - path: app/
+            - path: src/
               config:
                 trigger: "artifact-s3"
