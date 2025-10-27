@@ -1,10 +1,28 @@
----
 steps:
-  - command: echo "Upload artifact"
+  - label: ":hammer_and_wrench: CI Step"
     key: ci
-    command: buildkite-agent artifact upload "artifact.txt"
+    command: |
+      echo "🔧 Running CI Step..."
+      
+      # Create a test file
+      echo "Hello from CI step!" > artifact.txt
+      
+      # Upload artifact
+      buildkite-agent artifact upload "artifact.txt"
+      
+      # Save job ID to meta-data for later use
+      echo "Saving job ID $BUILDKITE_JOB_ID to meta-data..."
+      buildkite-agent meta-data set "ci-job-id" "$BUILDKITE_JOB_ID"
 
-  - label: ":rocket: trigger  cd"
-    trigger: child1
-    key: cd-trigger
-    depends_on: "ci"
+  - label: ":inbox_tray: Use Artifact from CI"
+    depends_on: ci
+    command: |
+      echo "📦 Fetching CI job ID from meta-data..."
+      CI_JOB_ID="$(buildkite-agent meta-data get ci-job-id)"
+      echo "CI Job ID is $CI_JOB_ID"
+
+      echo "⬇️ Downloading artifact from CI step..."
+      buildkite-agent artifact download "artifact.txt" . --step "$CI_JOB_ID"
+
+      echo "✅ Artifact content:"
+      cat artifact.txt
