@@ -19,7 +19,7 @@ steps:
     command: |
       echo "📦 Fetching CI job ID from meta-data..."
       CI_JOB_ID="$(buildkite-agent meta-data get ci-job-id)"
-      echo "CI Job ID is $CI_JOB_ID"
+      echo "CI Job ID is $(buildkite-agent meta-data get ci-job-id)"
 
       echo "⬇️ Downloading artifact from CI step..."
       buildkite-agent artifact download "artifact.txt" . --step $(buildkite-agent meta-data get ci-job-id)
