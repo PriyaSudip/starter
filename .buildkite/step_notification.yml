@@ -1,5 +1,5 @@
 steps:
-  - command: ./src/validation.sh"
+  - command: ./src/validation.sh
     notify:
       - slack:
           channels: ["#priya-test"]
