@@ -1,5 +1,5 @@
 steps:
-  - command: ./src/validation.sh
+  - command: ./src/validation.sh | echo "Validation step completed.$SLACK_MESSAGE"
     notify:
       - slack:
           channels: ["#priya-test"]
