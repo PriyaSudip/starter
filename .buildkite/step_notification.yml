@@ -1,6 +1,6 @@
 steps:
-  - command: export slack_message="validation passed"
+  - command: echo "testing notification"
     notify:
       - slack:
           channels: ["#priya-test"]
-          message: "$${slack_message}"
+          message: "Sending a message: ${BUILDKITE_MESSAG}E"
