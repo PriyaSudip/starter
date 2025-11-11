@@ -1,7 +1,7 @@
 steps:
-  - command: ./src/validation.sh | echo "Validation step completed.$$SLACK_MESSAGE"
+  - command: ./src/validation.sh | echo "Validation step completed.$$slack_message"
     notify:
       - slack:
           channels: ["#priya-test"]
-          message: buildkite-agent meta-data get slack_message
+          message: "$$slack_message"
 
