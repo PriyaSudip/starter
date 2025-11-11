@@ -3,5 +3,5 @@ steps:
     notify:
       - slack:
           channels: ["#priya-test"]
-          message: "$$SLACK_MESSAGE"
+          message: buildkite-agent meta-data get slack_message
 

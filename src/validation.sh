@@ -6,10 +6,4 @@ MESSAGE="Validation succeeded!"
 
 echo "$MESSAGE"
 
-
-
-export SLACK_MESSAGE=$MESSAGE
-
-
-echo "MESSAGE=$SLACK_MESSAGE"
-
+buildkite-agent meta-data set slack_message "$MESSAGE"
