@@ -21,11 +21,7 @@ cd src
 ls
 
 
-echo "running cleanup script $BUILDKITE_STEP_KEY.sh"
 
-chmod +x ./$BUILDKITE_STEP_KEY.sh
-
-./$BUILDKITE_STEP_KEY.sh
 
 
 

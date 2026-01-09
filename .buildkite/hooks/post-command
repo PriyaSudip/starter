@@ -4,6 +4,7 @@ set -euo pipefail
 echo "Post-command hook, searching for artifact"
 
 echo "BUILDKITE_BRANCH_SLUGIFIED from post command $BUILDKITE_BRANCH_SLUGIFIED"
+
 if [ $BUILDKITE_LABEL == ":test multi line:" ]; then
     echo "searching for artifact"
     output=$(buildkite-agent artifact search testr/revisions1/foo.txt 2>&1)
