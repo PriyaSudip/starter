@@ -1,0 +1,32 @@
+#!/bin/bash
+set -euo pipefail
+
+if [[ "${BUILDKITE_BRANCH}" =~ ^ain/(.*) ]]; then
+	export BUILDKITE_BRANCH_SLUGIFIED="merge-queue"
+fi
+
+echo "BUILDKITE_BRANCH_SLUGIFIED from pre command $BUILDKITE_BRANCH_SLUGIFIED"
+
+echo "BUILDKITE_BRANCH_SLUGIFIED $BUILDKITE_BRANCH_SLUGIFIED"
+echo "pre-exit hook, running"
+
+
+pwd
+ls
+
+
+
+cd src
+
+ls
+
+
+echo "running cleanup script $BUILDKITE_STEP_KEY.sh"
+
+chmod +x ./$BUILDKITE_STEP_KEY.sh
+
+./$BUILDKITE_STEP_KEY.sh
+
+
+
+echo "script called"

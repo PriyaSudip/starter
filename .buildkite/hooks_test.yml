@@ -1,0 +1,4 @@
+steps:
+- label: testing hook value
+  command: echo "BUILDKITE_BRANCH_SLUGIFIED is $BUILDKITE_BRANCH_SLUGIFIED"
+  key: step1

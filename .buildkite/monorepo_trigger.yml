@@ -14,3 +14,10 @@ steps:
   - label: "Run for any changes within src/"
     command: echo "Changes detected in src/, running pipeline..."
     if_changed: src/**
+
+
+
+  - label: "Coverage path filters"
+    if_changed: p2_zip/exec/**
+    agents:
+      queue: linux-x86-cpu-small
