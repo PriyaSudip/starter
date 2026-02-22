@@ -2,10 +2,10 @@ steps:
 
   
   - command: "buildkite-agent pipeline upload .buildkite/upload_1.yml --replace"
-    label: ":pipeline:"
+    label: ":pipeline upload key A and B:"
 
 
-  - label: "🚧"
-    command: "buildkite-agent pipeline upload .buildkite/upload_2.yml --replace"
+  - label: "pipeline upload key C"
+    command: "buildkite-agent pipeline upload .buildkite/upload_2.yml "
 
  
