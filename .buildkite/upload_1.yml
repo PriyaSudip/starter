@@ -4,6 +4,6 @@ steps:
     label: ":step A:"
     key: step_A
 
-  - command: sleep 20 | echo "upload step b"
+  - command: sleep 60 | echo "upload step b"
     label: ":step B:"
     key: step_B
