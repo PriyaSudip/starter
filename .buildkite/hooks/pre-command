@@ -12,18 +12,3 @@ echo "BUILDKITE_BRANCH_SLUGIFIED $BUILDKITE_BRANCH_SLUGIFIED"
 echo "pre-exit hook, running"
 
 
-pwd
-ls
-
-
-
-cd src
-
-ls
-
-
-
-
-
-
-echo "script called"
