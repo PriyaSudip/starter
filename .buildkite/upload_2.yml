@@ -1,0 +1,13 @@
+steps:
+  
+  - command: echo "upload step c"
+    label: ":step C:"
+    key: step_C
+
+  - command: echo "A dependent"
+    label: ":step CA:"
+    depends_on: step_A
+
+  - command: echo "B dependent"
+    label: ":step CB:"
+    depends_on: step_B

@@ -1,0 +1,11 @@
+steps:
+
+  
+  - command: "buildkite-agent pipeline upload .buildkite/upload_1.yml"
+    label: ":pipeline:"
+
+  - wait
+  - label: "🚧"
+    command: "buildkite-agent pipeline upload .buildkite/upload_2.yml"
+
+ 

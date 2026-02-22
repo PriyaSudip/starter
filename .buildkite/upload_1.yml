@@ -1,0 +1,9 @@
+steps:
+  
+  - command: echo "upload step a"
+    label: ":step A:"
+    key: step_A
+
+  - command: echo "upload step b"
+    label: ":step B:"
+    key: step_B
