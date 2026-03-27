@@ -5,6 +5,7 @@ steps:
   command: |
     WEBHOOK="$(buildkite-agent meta-data get buildkite:webhook)"
     echo "The current repository has $WEBHOOK  💫"
+    echo `buildkite-agent meta-data get buildkite:webhook`
 
 - label: "setup"
   key: setup
