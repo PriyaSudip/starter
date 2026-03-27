@@ -3,3 +3,7 @@ steps:
     label: ":rocket: Deploy"
     branches: "main"
     async: true
+
+  - command: "echo $((1+2))"
+    label: ":math: Addition 1+2"
+
