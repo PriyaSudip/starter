@@ -1,7 +1,7 @@
 ---
 steps:
 
-- label: "test webhook"
+- label: "test webhooks"
   command: |
     WEBHOOK="$(buildkite-agent meta-data get buildkite:webhook)"
     echo "The current repository has $WEBHOOK  💫"
