@@ -3,7 +3,10 @@ steps:
 
 - key: dd_key_test_one
   label: step_1
-  command: echo "hi"
+  retry:
+    automatic:
+      limit: 2
+  command: echo "hi from webhook"| exit 1
   key: one
   env:
     $TEST_ENV_CMD: "True"
@@ -16,7 +19,6 @@ steps:
 - key: dd_key_test_two
   depends_on: 
   label: step_2
-  command: buildkite-agent meta-data set "dd_tags.key" dd_key_test_two
-- key: dd_key_test_three
+  command: buildkite-agent meta-data set "dd_tags.retry_type" "$BUILDKITE_RETRY_TYPE" 
   label: step_3
   command: buildkite-agent meta-data set "dd_tags.key" dd_key_test_three

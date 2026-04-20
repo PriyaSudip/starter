@@ -1,3 +1,15 @@
+
+notify:
+  - github_commit_status:
+      context: "priya-custom-${BUILDKITE_BUILD_NUMBER}-${BUILDKITE_COMMIT}"
 steps:
-- label: Deploy to testing
+- label: Deploy to testing with block
   command: echo "hello 1"
+
+- block: "Block on condition"
+  blocked_state: "running"
+
+- label: Deploy to testing with block
+  command: echo "hello 2"
+
+
