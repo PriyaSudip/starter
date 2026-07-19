@@ -1,3 +1,3 @@
 steps:
 - label: Deploy to testing
-  command: echo "hello 3"
+  command: echo "hello 4"
