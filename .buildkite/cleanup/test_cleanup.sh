@@ -2,6 +2,6 @@
 set -euo pipefail
 
 
-echo "from cleanaup   ****#*88*"
+echo "from cleanaup   ***ddd*#*88*"
 
 
