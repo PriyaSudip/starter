@@ -4,7 +4,7 @@ steps:
       echo "matrix={{matrix}}"
       echo "BUILDKITE_CHANGED_FILES=$BUILDKITE_CHANGED_FILES"
     matrix:
-      - cleanup
+      - test_cleanup
       - hoook
     if_changed:
-      - "/cleanup/**.sh"
+      - "{{ matrix }}.sh"
