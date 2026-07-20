@@ -1,0 +1,10 @@
+steps:
+  - label: ":golang: Test {{matrix}}"
+    command: |
+      echo "matrix={{matrix}}"
+      echo "BUILDKITE_CHANGED_FILES=$BUILDKITE_CHANGED_FILES"
+    matrix:
+      - cleanup
+      - hoook
+    if_changed:
+      - "/{{matrix}}/**"
