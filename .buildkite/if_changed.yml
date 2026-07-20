@@ -1,10 +1,10 @@
 steps:
   - label: ":golang: Test {{matrix}}"
     command: |
-      echo "matrix={{matrix}}"
+      echo "{{matrix}}.sh"}"
       echo "BUILDKITE_CHANGED_FILES=$BUILDKITE_CHANGED_FILES"
     matrix:
       - test_cleanup
       - hoook
     if_changed:
-      - "{{ matrix }}.sh"
+      - "{{matrix}}.sh"
