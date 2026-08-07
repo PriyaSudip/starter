@@ -1,0 +1,6 @@
+steps:
+  - label: ":test_tube: Test"
+    command: "echo 'Running tests'"
+    agents:
+      queue: default
+
